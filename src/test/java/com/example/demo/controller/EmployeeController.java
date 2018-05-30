@@ -27,7 +27,7 @@ public class EmployeeController {
     }
 
     @RequestMapping("/employee/{id}")
-    public Employee getEmployee(@PathVariable String id){
+    public Employee getEmployee(@PathVariable int id){
         return employeeService.getEmployee(id);
     }
 
@@ -37,12 +37,12 @@ public class EmployeeController {
     }
 
     @RequestMapping(method = RequestMethod.PUT,path ="/employee/{id}")
-    public void updateEmployee(@RequestBody Employee em,@PathVariable String id){
+    public void updateEmployee(@RequestBody Employee em,@PathVariable int id){
     	employeeService.updateEmployee(id, em);
     }
 
     @RequestMapping(method = RequestMethod.DELETE,value ="/employee/{id}")
-    public void deleteEmployee(@PathVariable String id){
+    public void deleteEmployee(@PathVariable int id){
     	employeeService.deleteEmployee(id);
     }
 }

@@ -7,7 +7,7 @@ import javax.persistence.Id;
 public class Employee {
 
 	@Id
-	private String employeeId;
+	private int employeeId;
 	private String employeeName;
 	private String employeeEmail;
 	
@@ -15,16 +15,16 @@ public class Employee {
 		
 	}
 	
-	public Employee(String employeeId, String employeeName, String employeeEmail) {
+	public Employee(int employeeId, String employeeName, String employeeEmail) {
 		super();
 		this.employeeId = employeeId;
 		this.employeeName = employeeName;
 		this.employeeEmail = employeeEmail;
 	}
-	public String getEmployeeId() {
+	public int getEmployeeId() {
 		return employeeId;
 	}
-	public void setEmployeeId(String employeeId) {
+	public void setEmployeeId(int employeeId) {
 		this.employeeId = employeeId;
 	}
 	public String getEmployeeName() {
