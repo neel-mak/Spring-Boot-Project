@@ -10,4 +10,6 @@ public interface EmployeeRepository extends CrudRepository<Employee, Integer>{
 
 	
 	public List<Employee> findByEmployeeName(String name);
+	public List<Employee> findByEmployeeEmail(String email);
+
 }
